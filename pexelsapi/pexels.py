@@ -12,7 +12,10 @@ class Pexels():
         self.base_endpoint = 'https://api.pexels.com/v1/'
         self.video_endpoint = 'https://api.pexels.com/videos/'
         self.api_key = api_key
-        self.headers = {"Authorization": self.api_key}
+        self.headers = {
+            "Authorization": self.api_key,
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.3",
+            }
 
     def search_photos(self, query='ocean', orientation='', size='', color='', locale='', page=1, per_page=15):
         term = 'search'
